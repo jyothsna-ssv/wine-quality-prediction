@@ -118,7 +118,8 @@ s3://wine-ml-jk773/logs
      --conf spark.executor.cores=4 \
      /home/hadoop/wine_rf_training.py
    ```
-
+Training happened on 4 EMR nodes (executors added in Spark UI):
+![Training on 4 EMR nodes](images/model-training.png)
 Models and artifacts will be saved back to your S3 bucket under a predefined prefix in your training script.
 
 ---
@@ -133,6 +134,7 @@ Models and artifacts will be saved back to your S3 bucket under a predefined pre
    ```
 
 3. The script will output predictions to the console.
+![Prediction without docker](images/prediction-without-docker.png)
 
 ---
 
@@ -174,6 +176,7 @@ docker push <your-dockerhub-username>/wine-quality-predictor:latest
      --input_csv /data/prediction.csv
    ```
 
-3. The container will print predictions to the console or write to a mounted volume as configured.
+3. The container will print predictions to the console.
+![Prediction with docker](images/prediction-with-docker.png)
 
 ---
