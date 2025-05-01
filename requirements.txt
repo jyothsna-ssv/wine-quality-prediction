@@ -1,0 +1,4 @@
+numpy>=1.24
+py4j==0.10.9.7
+pyspark==3.5.5
+setuptools==80.1.0
